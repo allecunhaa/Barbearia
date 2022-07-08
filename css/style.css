@@ -1,0 +1,387 @@
+
+
+:root{
+
+   --color-primary: #917758;
+   --color-secundary: #3c2915;
+   --color-primary-light: #f0e7dd;
+
+}
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+
+    font-family: 'Poppins', sans-serif;
+   
+    
+}
+
+/* usamos para deixar os espaços laterais padrões*/
+.container{ 
+
+      width: 1170px;
+    margin:  0 auto;
+}
+
+/* ***HOME/BANNER *****/
+
+.home{
+    position: relative;
+    background-image: url(../images/bg-home.jpg);
+    height: 100vh; /*Viewport (area visivel do navegador*/
+    background-size: cover; /* para cobri a area*/
+}
+
+.home .header{
+
+    padding: 30px 0 ;
+}
+
+.home .header .nav{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.home .header .nav ul{
+    display: flex;
+    list-style: none;
+}
+.home .header .nav ul li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+}
+.home .header .nav ul li a {
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 12px;
+    padding: 20px;
+}
+
+.home .header .nav ul li a:hover{
+
+    border-bottom: 1px solid var(--color-primary);
+    color: var(--color-primary);
+    
+}
+
+.home .header .nav ul li .logo{
+    
+    margin: 0 30px;
+
+}
+
+.home .banner{
+
+    color: #917758;
+    text-align: center;
+    position: absolute;
+    height: 279px;
+    width: 870px;
+    left: 50%;
+    margin-left: -435px;
+    margin-top: -70px;
+    top: 50%;
+}
+
+.home .banner span{
+    display: block; /*empurra o texto pra baixo*/
+       
+}
+.home .banner .slogan1{
+
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--color-primary);
+}
+
+.home .banner .title{
+
+    font-size: 135px;
+    color: white;
+}
+
+.home .banner .slogan2{
+
+    font-size: 20px;
+   color: var(--color-primary);
+}
+
+
+/**** ABOUT*/
+
+.about{
+    background-color: var(--color-primary);
+}
+
+/* quero mudar o display somente do about*/
+.about .container{
+    display: flex;
+}
+
+.about .time{
+
+    width: 33%;
+    padding: 20px;
+    background-image: url(../images/brush-big.jpg);
+    position: relative;
+    margin-top: -50px;
+   
+    
+}
+.about .time .icon-cut{
+
+    width: 50px;
+}
+
+.about .experience{
+   
+    width: 66%;
+ 
+}
+
+.about .time .overlay{
+background-color: rgba(0,0,0,0.8);
+text-align: center;
+padding: 20px;
+
+}
+.about .time h3{
+
+    color: var(--color-primary);
+    border-bottom: 2px solid var(--color-primary);
+    width: fit-content; /*isso deixa ele do tamanho do conteudo e nao do H3*/
+    margin: 0 auto 30px auto;
+    font-size: 30px;
+}
+
+.about .time .text{
+
+    margin: 10px 0;
+
+}
+
+.about .time .text::after{
+    content: '•' ;
+    display: block; /* fica um embaixo do outro*/
+    color: white;
+    font-size: 25px;
+    margin-top: 10px;
+}
+
+/* isso se chama uma pseudo classe, onde modificamos o ultimo elemento da forma que queremos*/
+
+.about .time .text:last-of-type::after{
+    content: '|';
+
+}
+
+.about .time h4{
+
+    color: grey;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.about .time span{
+    color: white;
+    font-size: 15px;
+    display: block;
+    padding: 10px;
+}
+
+.about .experience{
+    width: 60%;
+    color: white;
+    margin-left: 7%;
+    margin-top: 100px;
+}
+
+.about .experience h2{
+
+    font-weight: 400;
+    font-size: 40px;
+}
+
+.about .experience h2::after{
+    display: block;
+    content: "";
+    width: 100px;
+    height: 3px;
+    background-color: #a38f78;
+     margin: 20px 0;
+    
+}
+.about .experience .text{
+    display: flex;
+    justify-content: space-around;
+}
+
+.about .experience p{
+    margin-bottom: 20px;
+    font-weight: 100;
+}
+
+/** Services*/
+
+.services{
+
+    padding: 100px 0;
+    text-align: center;
+}
+
+.services h2{
+
+    color: var(--color-secundary);
+    font-weight: 400;
+    font-size: 50px;
+}
+
+.services .boxes{
+
+  margin-top: 60px;
+  display:flex;
+  justify-content: space-between;
+}
+
+.services .box{
+
+    border: 3px solid;
+    color: var(--color-primary);
+    padding: 40px 30px;
+    margin: 30px;
+}
+
+.services .box h4{
+    color: var(--color-secundary);
+    margin-top: 30px;
+}
+
+.services .box p{
+    margin-top: 20px;
+    color: black;
+    font: 14px;
+    line-height: 30px;
+
+}
+
+
+/* Agenda*/
+
+.agenda{
+ padding: 100px 0;
+ background-image: url(/images/chair-ic.png);
+ background-repeat: no-repeat;
+ background-position: right bottom;
+ background-size: 300px;
+background-color: var(--color-primary);
+height: 100vh;
+
+
+}
+
+.agenda h2{
+    color: var(--color-primary-light);
+    font-weight: 400;
+    font-size: 50px;
+    margin-bottom: 30px;
+    text-align: center;
+
+}
+
+.agenda img{
+    margin: auto;
+    display: block;
+}
+
+.agenda form{
+    margin: 80px;
+}
+
+.agenda .Personal-data{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.agenda .input-wrapper{
+    width: 100%;
+    margin-right: 50px;
+}
+
+.agenda label{
+    display: block; /* para empurrar para baixo*/
+    color: var(--color-primary-light);
+    font-size: 14px;
+    margin-bottom: 2px;
+}
+
+.agenda  input,
+.agenda  select,
+.agenda textarea{
+    padding: 10px 10px;
+    outline: none;
+    border: none;
+    width: 100%;
+    border-radius: 3px;
+}
+
+.agenda button{
+
+    padding: 8px 40px;
+    background-color: var(--color-secundary);
+    color: white;
+    border: none;
+    margin-top: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
