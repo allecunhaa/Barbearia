@@ -5,6 +5,7 @@
    --color-primary: #917758;
    --color-secundary: #3c2915;
    --color-primary-light: #f0e7dd;
+   
 
 }
 
@@ -37,6 +38,7 @@ body{
 .home{
     position: relative;
     background-image: url(../images/bg-home.jpg);
+    background-attachment: fixed; /* o background fica fixo e dá a impressao que aundo fazemos scroll a imagem entra*/
     height: 100vh; /*Viewport (area visivel do navegador*/
     background-size: cover; /* para cobri a area*/
 }
@@ -351,6 +353,137 @@ height: 100vh;
     font-weight: bold;
     text-transform: uppercase;
 }
+
+
+/*Galery*/
+
+.gallery{
+    padding: 100px 0;
+    background-size: 300px;
+   background-color: var(--color-primary-light);
+
+   
+   
+   }
+   
+   .gallery h2{
+       color: var(--color-secundary) ;
+       font-weight: 400;
+       font-size: 50px;
+       margin-bottom: 30px;
+       text-align: center;
+   
+   }
+   
+   .gallery img{
+       margin: auto;
+       display: block;
+   }
+
+   .gallery .gallery-wrapper{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    flex-wrap: wrap;
+    width: 800px;
+    margin: 50px auto
+   
+
+   }
+
+   .gallery .gallery-wrapper div{
+
+    border: 10px solid var(--color-primary);
+    margin: 6px;
+    width: 33%;
+    
+   }
+
+   /*vai ter 100% da largura do pai dela que é a Div para as imagens encaixarem certinha*/
+
+   .gallery .gallery-wrapper img{
+
+    width: 100%;
+
+   }
+
+   /* location*/
+
+   .location{
+    padding: 100px 0;
+    background-size: cover;
+    background-image: url(../images/bg-location.jpg);
+   }
+
+   .location .head{
+    display: flex;
+    justify-content: space-between;
+    background-color: #191919;
+    padding: 40px;
+    width: 100%;
+       
+   }
+
+   .location .head .info{
+
+    display: flex;
+    text-align: center;
+   }
+   .location .head .info .icon{
+    display: flex;
+    justify-content: center;
+    border: 1px solid var(--color-primary);
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    border-radius: 100%;
+    margin-right: 10px;
+
+
+   }
+
+   .location .head .info .text span{
+    display: block;
+    font-size: 13px;
+  }
+
+  /* usar o first child, quer dizer que vai mudar as conf do primeiro span*/
+
+  .location .head .info .text span:first-child{
+
+    color: silver;
+   }
+
+   .location .head .info .text span:last-child{
+
+    color: white;
+   }
+
+ .location .map{
+
+    width: 100%;
+ }
+
+ .location .map iframe{
+
+    width: 100%;
+ }
+ 
+
+ /* Footer*/
+
+ .footer{
+    background-color: #191919;
+    color: white;
+    padding: 40px;
+    font-size: 20px;
+    text-align: center;
+ }
+  
+
+
+
+
 
 
 
